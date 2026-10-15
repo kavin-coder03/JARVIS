@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --bg-main: #FFFFFF;
+    --surface: #F7FBF7;
+    --surface-light: #EAF7EC;
+    --primary-green: #2E8B57;
+    --heading-green: #1F5135;
+    --text-main: #24312A;
+    --text-muted: #647067;
+    --border-subtle: #DCE9DE;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: var(--font-sans);
+  }
+}
+
+/* Custom cyber scanner animations */
+@keyframes scanLaser {
+  0% {
+    top: 5%;
+    opacity: 0.7;
+  }
+  50% {
+    top: 92%;
+    opacity: 1;
+  }
+  100% {
+    top: 5%;
+    opacity: 0.7;
+  }
+}
+
+.animate-scan-laser {
+  animation: scanLaser 2.2s ease-in-out infinite;
+}
+
+/* Clean light scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F7FBF7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #DCE9DE;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2E8B57;
+}
